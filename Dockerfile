@@ -1,6 +1,6 @@
 FROM golang:1.8-alpine3.6
 
-MAINTAINER Lachlan Evenson <lachlan.evenson@gmail.com>
+MAINTAINER Alessandro Vozza <alessandro.vozza@microsoft.com>
 
 ARG VCS_REF
 ARG BUILD_DATE
@@ -11,12 +11,12 @@ LABEL org.label-schema.vcs-ref=$VCS_REF \
       org.label-schema.build-date=$BUILD_DATE \
       org.label-schema.docker.dockerfile="/Dockerfile"
 
-COPY . /go/src/github.com/lachie83/croc-hunter
+COPY . /go/src/github.com/ams0/croc-hunter
 COPY static/ static/
 
 ENV GIT_SHA $VCS_REF
 ENV GOPATH /go
-RUN cd $GOPATH/src/github.com/lachie83/croc-hunter && go install -v .
+RUN cd $GOPATH/src/github.com/ams0/croc-hunter && go install -v .
 
 CMD ["croc-hunter"]
 
