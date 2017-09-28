@@ -1,6 +1,6 @@
 default: docker_build
 
-DOCKER_IMAGE ?= wazug.azureacr.io/croc-hunter/croc-hunter
+DOCKER_IMAGE ?= wazug.azurecr.io/croc-hunter/croc-hunter
 BUILD_NUMBER ?= `git rev-parse --short HEAD`
 VCS_REF ?= `git rev-parse --short HEAD`
 

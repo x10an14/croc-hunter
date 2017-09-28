@@ -8,7 +8,7 @@
     "hostname": "croc-hunter.apps.qubernetes.com"
   },
   "container_repo": {
-    "host": "wazug.azureacr.io",
+    "host": "wazug.azurecr.io",
     "master_acct": "wazug",
     "alt_acct": "wazug",
     "jenkins_creds_id": "acr_creds",
